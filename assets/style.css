@@ -1,0 +1,167 @@
+:root {
+    color-scheme: light;
+    font-family: system-ui, sans-serif;
+    color: #172a26;
+    background: #eef3f1;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    color: #fff;
+    background: #173d34;
+}
+
+.header-content {
+    max-width: 70rem;
+    margin: auto;
+    min-height: 4rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-name {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: clamp(1rem, 5vw, 4rem) 1rem;
+}
+
+.card {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: #fff;
+    border: 1px solid #cfdbd5;
+    border-radius: 0.75rem;
+}
+
+.card-wide {
+    max-width: 46rem;
+}
+
+h1 {
+    margin: 0 0 1.25rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.form, .field {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form {
+    gap: 0.75rem;
+}
+
+.field-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 42rem) {
+    .field-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+label {
+    font-weight: 600;
+}
+
+input:not([type="hidden"]), button {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #788f84;
+    border-radius: 0.4rem;
+    font: inherit;
+}
+
+input:not([type="hidden"]) {
+    width: 100%;
+}
+
+button {
+    justify-self: start;
+    color: #fff;
+    background: #185a49;
+    border-color: #185a49;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.secondary {
+    background: #173d34;
+    border-color: #a6c1b6;
+}
+
+a {
+    color: #185a49;
+    text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+    outline: 3px solid #327ea5;
+    outline-offset: 3px;
+}
+
+.error, .notice {
+    margin: 0 0 1rem;
+    padding: 0.75rem;
+    border-radius: 0.4rem;
+}
+
+.error {
+    color: #7f2522;
+    background: #faecea;
+}
+
+.error p, .hint {
+    margin: 0;
+}
+
+.error ul {
+    margin: 0.25rem 0 0;
+    padding-left: 1.25rem;
+}
+
+[aria-invalid="true"] {
+    border-color: #7f2522;
+}
+
+.notice {
+    color: #184436;
+    background: #e6f2ea;
+}
+
+.hint, .site-footer {
+    color: #465e55;
+    font-size: 0.9rem;
+}
+
+.form-link {
+    margin: 1rem 0 0;
+}
+
+.site-footer {
+    padding: 1rem;
+    text-align: center;
+}
